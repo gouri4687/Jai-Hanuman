@@ -255,11 +255,11 @@ img {
 
 /*** back to top **/
 .back-to-top {
-    background-color: rgb(91 164 145);
+    background-color:rgb(167 124 113);
     width: 45px;
     height: 45px;
     line-height: 45px;
-    border: 2px solid #c7efdb;
+    border: 2px solid #fcdbd3;
     border-radius: 45px;
     text-align: center;
     display: none;
@@ -1203,11 +1203,11 @@ img {
     /* navigation open and close btn hide for width screen */
     /* style for navigation less than 992px */
     /*navbar collaps less then 992px*/
-    background-color: #b3d1c3;
+    background-color: #a77c70;
 }
 
 .site-header .navigation {
-    background-color: #b3d2c3;;
+    background-color: #a77c71;
     margin-bottom: 0;
     border: 0;
     -webkit-border-radius: 0;
@@ -1673,8 +1673,9 @@ img {
 
     .header-style-1 #navbar>ul>li>a,
     .header-style-2 #navbar>ul>li>a {
-        font-weight: 500;
-        color: #283a5e;
+        font-weight: 900;
+        color: #fff;
+    
     }
 
     .header-style-1 .quote-btn,
@@ -1758,6 +1759,8 @@ img {
 .header-style-2 .search-quote .open-btn {
     background: transparent;
     border: 0;
+    color: #fff;
+
 }
 
 .header-style-1 .search-quote .open-btn i,
@@ -1992,7 +1995,7 @@ img {
 .hero-static-image-2,
 .hero-static-image-3 {
     /* background: #fff; */
-    background: url(../images/slider/JHHomepage.png) center center/100% no-repeat local;
+    background: url(../images/slider/JHOMEPAGEE.png) center center/100% no-repeat local;
     /* height: 900px; */
     position: relative;
 }
@@ -2223,7 +2226,7 @@ hero-style-2
 }
 
 .site-header .sticky-header {
-    background: #b3d2c3;;
+    background: #a77c71;
     -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     padding: 19px 0 15px;
@@ -3758,7 +3761,7 @@ hero-style-2
 1.3 footer-area start
 =========================================*/
 .hx-site-footer-area {
-    background: #b3d2c3;;
+    background: #a77c71;
 }
 
 .hx-site-footer-top .container {
@@ -3772,7 +3775,7 @@ hero-style-2
     bottom: -60px;
     height: 1px;
     width: 100%;
-    background: #feddd3;
+    background: #6cab9a;
 }
 
 .hx-site-footer-top {
@@ -3804,7 +3807,7 @@ hero-style-2
 }
 
 .hx-site-footer-top p {
-    color: #777;
+    color: #fff;
     margin-bottom: 0;
 }
 
@@ -3819,7 +3822,7 @@ hero-style-2
 
 .hx-site-footer-top h3 {
     font-size: 25px;
-    color: #444;
+    color: #fff;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
@@ -3871,7 +3874,7 @@ hero-style-2
     bottom: 0;
     width: 80px;
     height: 3px;
-    background: #ed5217;
+    background: #6cab9a;;
     border-radius: 20px;
 }
 
@@ -3887,7 +3890,7 @@ hero-style-2
 }
 
 .adress-section ul li {
-    color: #666;
+    color: #fff;
     margin-bottom: 15px;
 }
 
@@ -3896,11 +3899,12 @@ hero-style-2
 }
 
 .adress-section .ad span {
-    color: #ed5217;
+    color: #000;
+    f
 }
 
 .service-section ul li {
-    color: #666;
+    color: #fff;
     padding-left: 20px;
     padding-bottom: 10px;
     position: relative;
@@ -3913,13 +3917,13 @@ hero-style-2
     height: 8px;
     left: 0;
     top: 8px;
-    background: #ed5217;
+    background: #000;
     border-radius: 50%;
 
 }
 
 .hx-site-footer-bottom {
-    background: #b3d2c3;;
+    background: #a77c71;;
     padding: 30px 0;
 }
 
@@ -3928,7 +3932,7 @@ hero-style-2
 }
 
 .hx-site-footer-bottom-content span {
-    color: #666;
+    color: #fff;
     font-size: 16px;
     text-align: center;
 }
@@ -5667,10 +5671,15 @@ color:#3d9857
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    width: 330px;
+    /* width: 335px; */
     text-align: center;
     transition: transform 0.3s;
   }
+  @media (min-width: 991px) { 
+    .card{
+        width: 335px;
+    }
+} 
   .card:hover {
     transform: translateY(-5px);
   }
@@ -5707,9 +5716,30 @@ color:#3d9857
     font-size: 17px;
 }
 .service_icon{
-    border: 1px solid #ed3833;
-          color: #ed3833;
-          border-radius: 50%;height: 26px;
-          width: 35px;margin-left: 22px
+    /* border: 1px solid #ed3833; */
+    color: #ed3833;
+    /* border-radius: 50%; */
+    height: 26px;
+    width: 35px;
+    margin-left: 22px;
+    display: contents;
 }
- 
+ .card_img{
+    width: 30rem;
+ }
+ @media (min-width: 991px) { 
+    .card_img{
+        width: 20.4rem;
+     }
+}
+
+@media only screen 
+  and (max-width: 480px) { 
+    .contact-img1{
+        display: none;
+    }
+    .contact-content{
+        padding-right: 0px !important;
+
+    }
+} 
