@@ -1,6 +1,6 @@
-(function($) {
+(function ($) {
 
-	"use strict";
+    "use strict";
 
 
     /*------------------------------------------
@@ -14,7 +14,7 @@
         var closeBtn = $(".navigation-holder .close-navbar");
         var body = $(".page-wrapper");
 
-        openBtn.on("click", function() {
+        openBtn.on("click", function () {
             if (!navbar.hasClass("slideInn")) {
                 navbar.addClass("slideInn");
                 body.addClass("body-overlay");
@@ -22,7 +22,7 @@
             return false;
         })
 
-        closeBtn.on("click", function() {
+        closeBtn.on("click", function () {
             if (navbar.hasClass("slideInn")) {
                 navbar.removeClass("slideInn");
             }
@@ -61,10 +61,10 @@
         if (windowWidth <= 991) {
             subMenu.hide();
             megamenu.hide();
-            menuItemWidthSubMenu.on("click", function(e) {
+            menuItemWidthSubMenu.on("click", function (e) {
                 var $this = $(this);
                 $this.siblings().slideToggle();
-                 e.preventDefault();
+                e.preventDefault();
                 e.stopImmediatePropagation();
             })
         } else if (windowWidth > 991) {
@@ -79,11 +79,11 @@
     // Parallax background
     function bgParallax() {
         if ($(".parallax").length) {
-            $(".parallax").each(function() {
+            $(".parallax").each(function () {
                 var height = $(this).position().top;
-                var resize     = height - $(window).scrollTop();
-                var doParallax = -(resize/5);
-                var positionValue   = doParallax + "px";
+                var resize = height - $(window).scrollTop();
+                var doParallax = -(resize / 5);
+                var positionValue = doParallax + "px";
                 var img = $(this).data("bg-image");
 
                 $(this).css({
@@ -99,14 +99,14 @@
     // Hero slider background setting
     function sliderBgSetting() {
         if ($(".hero-slider .slide").length) {
-            $(".hero-slider .slide").each(function() {
+            $(".hero-slider .slide").each(function () {
                 var $this = $(this);
                 var img = $this.find(".slider-bg").attr("src");
 
                 console.log(img);
 
                 $this.css({
-                    backgroundImage: "url("+ img +")",
+                    backgroundImage: "url(" + img + ")",
                     backgroundSize: "cover",
                     backgroundPosition: "center center"
                 })
@@ -130,15 +130,15 @@
     }
 
     //Active heor slider
-                heroSlider();
+    heroSlider();
 
 
     /*------------------------------------------
         = HIDE PRELOADER
     -------------------------------------------*/
     function preloader() {
-        if($('.preloader').length) {
-            $('.preloader').delay(100).fadeOut(500, function() {
+        if ($('.preloader').length) {
+            $('.preloader').delay(100).fadeOut(500, function () {
 
                 //active wow
                 wow.init();
@@ -154,11 +154,11 @@
         = WOW ANIMATION SETTING
     -------------------------------------------*/
     var wow = new WOW({
-        boxClass:     'wow',      // default
+        boxClass: 'wow',      // default
         animateClass: 'animated', // default
-        offset:       0,          // default
-        mobile:       true,       // default
-        live:         true        // default
+        offset: 0,          // default
+        mobile: true,       // default
+        live: true        // default
     });
 
 
@@ -167,9 +167,9 @@
     -------------------------------------------*/
     if ($(".fancybox").length) {
         $(".fancybox").fancybox({
-            openEffect  : "elastic",
-            closeEffect : "elastic",
-            wrapCSS     : "project-fancybox-title-style"
+            openEffect: "elastic",
+            closeEffect: "elastic",
+            wrapCSS: "project-fancybox-title-style"
         });
     }
 
@@ -178,17 +178,17 @@
         = POPUP VIDEO
     -------------------------------------------*/
     if ($(".video-btn").length) {
-        $(".video-btn").on("click", function(){
+        $(".video-btn").on("click", function () {
             $.fancybox({
                 href: this.href,
                 type: $(this).data("type"),
-                'title'         : this.title,
-                helpers     : {
-                    title : { type : 'inside' },
-                    media : {}
+                'title': this.title,
+                helpers: {
+                    title: { type: 'inside' },
+                    media: {}
                 },
 
-                beforeShow : function(){
+                beforeShow: function () {
                     $(".fancybox-wrap").addClass("gallery-fancybox");
                 }
             });
@@ -206,7 +206,7 @@
             type: 'image',
 
             gallery: {
-              enabled: true
+                enabled: true
             },
 
             zoom: {
@@ -214,7 +214,7 @@
 
                 duration: 300,
                 easing: 'ease-in-out',
-                opener: function(openerElement) {
+                opener: function (openerElement) {
                     return openerElement.is('img') ? openerElement : openerElement.find('img');
                 }
             }
@@ -229,7 +229,7 @@
         if ($(".sortable-gallery .gallery-filters").length) {
             var $container = $('.gallery-container');
             $container.isotope({
-                filter:'*',
+                filter: '*',
                 animationOptions: {
                     duration: 750,
                     easing: 'linear',
@@ -237,12 +237,12 @@
                 }
             });
 
-            $(".gallery-filters li a").on("click", function() {
+            $(".gallery-filters li a").on("click", function () {
                 $('.gallery-filters li .current').removeClass('current');
                 $(this).addClass('current');
                 var selector = $(this).attr('data-filter');
                 $container.isotope({
-                    filter:selector,
+                    filter: selector,
                     animationOptions: {
                         duration: 750,
                         easing: 'linear',
@@ -262,13 +262,13 @@
     -------------------------------------------*/
     function masonryGridSetting() {
         if ($('.masonry-gallery').length) {
-            var $grid =  $('.masonry-gallery').masonry({
+            var $grid = $('.masonry-gallery').masonry({
                 itemSelector: '.grid-item',
                 columnWidth: '.grid-item',
                 percentPosition: true
             });
 
-            $grid.imagesLoaded().progress( function() {
+            $grid.imagesLoaded().progress(function () {
                 $grid.masonry('layout');
             });
         }
@@ -323,19 +323,19 @@
         $(document.body).append(serachFormBox);
         serachFormBox.hide();
 
-        openSeachBtn.on("click", function(e) {
+        openSeachBtn.on("click", function (e) {
             serachFormBox.fadeIn();
             return false;
         });
 
-        serachFormBox.on("click", function() {
+        serachFormBox.on("click", function () {
             serachFormBox.fadeOut();
             return false;
-        }).find(".form").on("click", function(e) {
+        }).find(".form").on("click", function (e) {
             e.stopPropagation();
         })
     }
-    
+
 
 
     /*------------------------------------------
@@ -343,9 +343,9 @@
     -------------------------------------------*/
     if ($(".odometer").length) {
         $('.odometer').appear();
-        $(document.body).on('appear', '.odometer', function(e) {
+        $(document.body).on('appear', '.odometer', function (e) {
             var odo = $(".odometer");
-            odo.each(function() {
+            odo.each(function () {
                 var countNumber = $(this).attr("data-count");
                 $(this).html(countNumber);
             });
@@ -353,9 +353,9 @@
     }
 
 
- /*================================
-     Gift-carousel
-     ==================================*/
+    /*================================
+        Gift-carousel
+        ==================================*/
     function testimonial_carousel() {
         var owl = $(".hx-testimonial-active");
         owl.owlCarousel({
@@ -453,18 +453,18 @@
                     url: "mail.php",
                     data: $(form).serialize(),
                     success: function () {
-                        $( "#loader").hide();
-                        $( "#success").slideDown( "slow" );
-                        setTimeout(function() {
-                        $( "#success").slideUp( "slow" );
+                        $("#loader").hide();
+                        $("#success").slideDown("slow");
+                        setTimeout(function () {
+                            $("#success").slideUp("slow");
                         }, 3000);
                         form.reset();
                     },
-                    error: function() {
-                        $( "#loader").hide();
-                        $( "#error").slideDown( "slow" );
-                        setTimeout(function() {
-                        $( "#error").slideUp( "slow" );
+                    error: function () {
+                        $("#loader").hide();
+                        $("#error").slideDown("slow");
+                        setTimeout(function () {
+                            $("#error").slideUp("slow");
                         }, 3000);
                     }
                 });
@@ -489,39 +489,39 @@
         }
     }
 
-    $(".back-to-top").on("click", function() {
+    $(".back-to-top").on("click", function () {
         $("html,body").animate({
             scrollTop: 0
         }, 700);
         return false;
-    })    
+    })
 
 
 
     /*==========================================================================
         WHEN DOCUMENT LOADING
     ==========================================================================*/
-        $(window).on('load', function() {
+    $(window).on('load', function () {
 
-            preloader();
+        preloader();
 
-            sliderBgSetting();
+        sliderBgSetting();
 
-            toggleMobileNavigation();
+        toggleMobileNavigation();
 
-            smallNavFunctionality();
+        smallNavFunctionality();
 
-        });
+    });
 
 
 
     /*==========================================================================
         WHEN WINDOW SCROLL
     ==========================================================================*/
-    $(window).on("scroll", function() {
+    $(window).on("scroll", function () {
 
-		if ($(".site-header").length) {
-            stickyMenu( $('.site-header .navigation'), "sticky-on" );
+        if ($(".site-header").length) {
+            stickyMenu($('.site-header .navigation'), "sticky-on");
         }
 
         toggleBackToTopBtn();
@@ -532,12 +532,12 @@
     /*==========================================================================
         WHEN WINDOW RESIZE
     ==========================================================================*/
-    $(window).on("resize", function() {
-        
+    $(window).on("resize", function () {
+
         toggleClassForSmallNav();
 
         clearTimeout($.data(this, 'resizeTimer'));
-        $.data(this, 'resizeTimer', setTimeout(function() {
+        $.data(this, 'resizeTimer', setTimeout(function () {
             smallNavFunctionality();
         }, 200));
 
@@ -546,3 +546,9 @@
 
 
 })(window.jQuery);
+
+
+
+
+
+

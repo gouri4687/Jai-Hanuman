@@ -1,85 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="irstheme">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="irstheme" />
 
-    <title> Jai Hanuman tours & travels </title>
-    <link rel="icon" href="assets/images/JH LOGO.png">
-    
-    <link href="assets/css/themify-icons.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
-    <link href="assets/css/flaticon.css" rel="stylesheet">
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/animate.css" rel="stylesheet">
-    <link href="assets/css/owl.carousel.css" rel="stylesheet">
-    <link href="assets/css/owl.theme.css" rel="stylesheet">
-    <link href="assets/css/slick.css" rel="stylesheet">
-    <link href="assets/css/slick-theme.css" rel="stylesheet">
-    <link href="assets/css/owl.transitions.css" rel="stylesheet">
-    <link href="assets/css/jquery.fancybox.css" rel="stylesheet">
-    <link href="assets/css/odometer-theme-default.css" rel="stylesheet">
-    <link href="assets/css/jquery.bxslider.min.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/responsive.css" rel="stylesheet">
+    <title>Jai Hanuman tours & travels</title>
+    <link rel="icon" href="assets/images/JH LOGO.png" />
+
+    <link href="assets/css/themify-icons.css" rel="stylesheet" />
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/css/flaticon.css" rel="stylesheet" />
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/css/animate.css" rel="stylesheet" />
+    <link href="assets/css/owl.carousel.css" rel="stylesheet" />
+    <link href="assets/css/owl.theme.css" rel="stylesheet" />
+    <link href="assets/css/slick.css" rel="stylesheet" />
+    <link href="assets/css/slick-theme.css" rel="stylesheet" />
+    <link href="assets/css/owl.transitions.css" rel="stylesheet" />
+    <link href="assets/css/jquery.fancybox.css" rel="stylesheet" />
+    <link href="assets/css/odometer-theme-default.css" rel="stylesheet" />
+    <link href="assets/css/jquery.bxslider.min.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
+    <link href="assets/css/responsive.css" rel="stylesheet" />
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-
     <style>
-        #myBtnWhatsapp {
-          position: fixed;
-          bottom: 10%;
-          right: 2% !important;
-          z-index: 99;
-          border: none;
-          outline: none;
-          background-image: linear-gradient(to right, #59ee75, #28d045);
-          cursor: pointer;
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-            0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-  
-        #myBtnWhatsapp .fa-whatsapp {
-          color: #fff;
-        }
-  
-        .fa-phone {
-          color: #000;
-        }
-        #fa-phone {
-          color: #fff !important;
-        }
-        #myBtnCall {
-          position: fixed;
-          bottom: 10%;
-          left: 2% !important;
-          z-index: 99;
-          border: none;
-          outline: none;
-          background-color: #fff;
-          cursor: pointer;
-          width: 50px;
-          height: 50px;
-          border-radius: 50%;
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
-            0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
-      </style>
+      .slider-container {
+        position: relative;
+        margin: auto;
+        overflow: hidden;
+      }
+      .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+      .slide {
+        min-width: 100%;
+        box-sizing: border-box;
+      }
+      .slider-container img {
+        width: 100%;
+        display: block;
+      }
+      .nav-buttons {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+      }
+      .prev,
+      .next {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 8px;
+        cursor: pointer;
+      }
 
-</head>
+      #myBtnWhatsapp {
+        position: fixed;
+        bottom: 10%;
+        right: 2% !important;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-image: linear-gradient(to right, #59ee75, #28d045);
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
 
-<body>
+      #myBtnWhatsapp .fa-whatsapp {
+        color: #fff;
+      }
+
+      .fa-phone {
+        color: #000;
+      }
+      #fa-phone {
+        color: #fff !important;
+      }
+      #myBtnCall {
+        position: fixed;
+        bottom: 10%;
+        left: 2% !important;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-color: #fff;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+    </style>
+  </head>
+
+  <body>
     <a
       href="tel:+917386733999"
       target="_blank"
@@ -102,37 +136,41 @@
 
     <!-- start page-wrapper -->
     <div class="page-wrapper">
-
-        <!-- start preloader -->
-        <div class="preloader">
-            <div class="lds-ripple">
-                <div></div>
-                <div></div>
-            </div>
+      <!-- start preloader -->
+      <div class="preloader">
+        <div class="lds-ripple">
+          <div></div>
+          <div></div>
         </div>
-        <!-- end preloader -->
+      </div>
+      <!-- end preloader -->
 
-        <!-- Start header -->
-        <header id="header" class="site-header header-style-2">
-            <nav class="navigation navbar navbar-default">
-                <div class="container">
-                    <div class="navbar-header">
-                        <button type="button" class="open-btn">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="index.html"><img  class="logo" src="assets/images/JH LOGO.png" alt></a>
-                    </div>
-                    <div id="navbar" class="navbar-collapse collapse navigation-holder navbar-right">
-                        <button class="close-navbar"><i class="ti-close"></i></button>
-                        <ul class="nav navbar-nav">
-                            <li class="menu-item-has-children">
-                                <a href="index.html">Home</a>
-                                <!-- <ul class="sub-menu"> -->
-                                    <!-- <li><a href="index.html">Home style 1</a></li> -->
-                                    <!-- <li><a href="index-2.html">Home style 2</a></li>
+      <!-- Start header -->
+      <header id="header" class="site-header header-style-2">
+        <nav class="navigation navbar navbar-default">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="open-btn">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html"
+                ><img class="logo" src="assets/images/JH LOGO.png" alt
+              /></a>
+            </div>
+            <div
+              id="navbar"
+              class="navbar-collapse collapse navigation-holder navbar-right"
+            >
+              <button class="close-navbar"><i class="ti-close"></i></button>
+              <ul class="nav navbar-nav">
+                <li class="menu-item-has-children">
+                  <a href="index.html">Home</a>
+                  <!-- <ul class="sub-menu"> -->
+                  <!-- <li><a href="index.html">Home style 1</a></li> -->
+                  <!-- <li><a href="index-2.html">Home style 2</a></li>
                                     <li><a href="index-3.html">Home style 3</a></li>
                                     <li class="menu-item-has-children">
                                         <a href="#Level3">Third level</a>
@@ -142,17 +180,17 @@
                                             <li><a href="#">Level3</a></li>
                                         </ul>
                                     </li> -->
-                                <!-- </ul> -->
-                            </li>
-                            <li><a href="#about">about</a></li>
-                            <li class="menu-item-has-children">
-                                <a href="#service">Services</a>
-                                <!-- <ul class="sub-menu"> -->
-                                    <!-- <li><a href="services.html">Services</a></li> -->
-                                    <!-- <li><a href="service-details.html">Service single</a></li> -->
-                                <!-- </ul> -->
-                            </li>
-                            <!-- <li class="menu-item-has-children">
+                  <!-- </ul> -->
+                </li>
+                <li><a href="#about">about</a></li>
+                <li class="menu-item-has-children">
+                  <a href="#service">Services</a>
+                  <!-- <ul class="sub-menu"> -->
+                  <!-- <li><a href="services.html">Services</a></li> -->
+                  <!-- <li><a href="service-details.html">Service single</a></li> -->
+                  <!-- </ul> -->
+                </li>
+                <!-- <li class="menu-item-has-children">
                                 <a href="#">Pages</a>
                                 <ul class="sub-menu">
                                     <li><a href="Pricing.html">Pricing</a></li>
@@ -161,7 +199,7 @@
                                     <li><a href="404.html">404</a></li>
                                 </ul>
                             </li> -->
-                            <!-- <li class="menu-item-has-children">
+                <!-- <li class="menu-item-has-children">
                                 <a href="#">Blog</a>
                                 <ul class="sub-menu">
                                     <li><a href="blog.html">Blog</a></li>
@@ -169,31 +207,39 @@
                                     <li><a href="blog-details.html">Blog single</a></li>
                                 </ul>
                             </li> -->
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div><!-- end of nav-collapse -->
-                    <div class="search-quote">
-                        <div class="header-search-area">
-                            <div class="header-search-form">
-                                <form class="form">
-                                    <div>
-                                        <input type="text" class="form-control" placeholder="Search here">
-                                    </div>
-                                    <button type="submit" class="btn"><i class="fa fa-search"></i></button>
-                                </form>
-                            </div>
-                            <!-- <div>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+            <!-- end of nav-collapse -->
+            <div class="search-quote">
+              <div class="header-search-area">
+                <div class="header-search-form">
+                  <form class="form">
+                    <div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Search here"
+                      />
+                    </div>
+                    <button type="submit" class="btn">
+                      <i class="fa fa-search"></i>
+                    </button>
+                  </form>
+                </div>
+                <!-- <div>
                                 <button class="btn open-btn"><i class="fa fa-search"></i></button>
                             </div> -->
-                        </div>
-                    </div>
-                </div><!-- end of container -->
-            </nav>
-        </header>
-        <!-- end of header -->
+              </div>
+            </div>
+          </div>
+          <!-- end of container -->
+        </nav>
+      </header>
+      <!-- end of header -->
 
-        <!-- start of hero -->
-        <!-- <section class="hero hero-static-image">
+      <!-- start of hero -->
+      <!-- <section class="hero hero-static-image">
             <div class="container">
                 <div class="row">
                     <div class="col col-md-6 col-sm-7">
@@ -211,7 +257,33 @@
                 </div>
             </div>
         </section> -->
-        <section class="hero hero-static-image-2">
+      <div class="slider-container">
+        <div class="slides">
+          <div class="slide">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1664302933260-d48621eeca1c?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Slide 1"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="https://images.unsplash.com/photo-1672191294725-f80b074c4db3?q=80&w=2832&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Slide 2"
+            />
+          </div>
+          <div class="slide">
+            <img
+              src="https://images.unsplash.com/photo-1671720410284-404fbdcc73e7?q=80&w=2942&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Slide 3"
+            />
+          </div>
+        </div>
+        <div class="nav-buttons">
+          <span class="prev">&#10094;</span>
+          <span class="next">&#10095;</span>
+        </div>
+      </div>
+      <!-- <section class="hero hero-static-image-2">
             <div class="container">
                 <div class="row">
                     <div class="col col-md-6 col-sm-7">
@@ -228,32 +300,42 @@
                     <div class="hero-image-2"></div>
                 </div>
             </div>
-        </section>
-        <!-- end of hero slider -->
+        </section> -->
+      <!-- end of hero slider -->
 
-
-        <!-- start about-section -->
-        <section class="about-section" id="about">
-            <div class="content-area">
-                <div class="left-content">
-                    <img src="assets/images/about/1about us.png" alt>
-                </div>
-                <div class="right-content">
-                    <div class="about-content">
-                        <div class="section-title">
-                            <span>About Our Company</span>
-                            <h2>How We Can Help you</h2>
-                        </div>
-                        <div class="details">
-                            <p>Established in 2008 by T. Reddepp Reddy, Jai Hanuman Tours & Travels is a trusted car rental service specializing in comfortable and reliable transportation from Bangalore to Tirupati and the surrounding areas. Known for its commitment to customer satisfaction and punctual service, the company offers a wide variety of cars, from economy options to luxury vehicles, ensuring every traveler finds the perfect fit for their needs. Whether for a pilgrimage or a personal trip, Jai Hanuman Tours & Travels guarantees a seamless and enjoyable experience.</p>
-                            </div>
-                    </div>
-                </div>
+      <!-- start about-section -->
+      <section class="about-section" id="about">
+        <div class="content-area">
+          <div class="left-content">
+            <img src="assets/images/about/1about us.png" alt />
+          </div>
+          <div class="right-content">
+            <div class="about-content">
+              <div class="section-title">
+                <span>About Our Company</span>
+                <h2>How We Can Help you</h2>
+              </div>
+              <div class="details">
+                <p>
+                  Established in 2008 by T. Reddepp Reddy, Jai Hanuman Tours &
+                  Travels is a trusted car rental service specializing in
+                  comfortable and reliable transportation from Bangalore to
+                  Tirupati and the surrounding areas. Known for its commitment
+                  to customer satisfaction and punctual service, the company
+                  offers a wide variety of cars, from economy options to luxury
+                  vehicles, ensuring every traveler finds the perfect fit for
+                  their needs. Whether for a pilgrimage or a personal trip, Jai
+                  Hanuman Tours & Travels guarantees a seamless and enjoyable
+                  experience.
+                </p>
+              </div>
             </div>
-        </section>
-        <!-- end about-section -->
-        <!--service area start -->
-        <!-- <div class="service-style-1 section-padding">
+          </div>
+        </div>
+      </section>
+      <!-- end about-section -->
+      <!--service area start -->
+      <!-- <div class="service-style-1 section-padding">
             <div class="container">
                 <div class="col-12">
                     <div class="section-title-s2 text-center">
@@ -332,194 +414,217 @@
                 </div>
             </div>
         </div> -->
-        <!-- service area end -->
-          <!-- Why -->
-        <div class="service-style-3 section-padding">
-            <div class="container">
-                <div class="col-12">
-                    <div class="section-title-s2 text-center">
-                        <!-- <span>W</span> -->
-                        <h2>Why Choose Us?</h2>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="service-wrap">
-                            <div class="service-icon">
-                                <i class="fa-solid fa-car"></i>
-                            </div>
-                            <div class="service-text">
-                                <h2>Wide Variety of vehicles</h2>
-                                <p>Choose from a range of well-maintained cars, from budget-friendly options to premium vehicles, to suit every traveler's needs.</p>
-                            </div>  
-                        </div>
-                    </div>
-                    <div class="col-md-4  col-sm-6">
-                        <div class="service-wrap">
-                            <div class="service-icon-2">
-                                <i class="fa-solid fa-hand-holding-dollar"></i>
-                            </div>
-                            <div class="service-text">
-                                <h2>Best Price Guarantee</h2>
-                                <p>We offer competitive pricing to ensure you get the best value for your trip, without compromising on quality.</p>
-                            </div>  
-                        </div>
-                    </div>
-                    <div class="col-md-4  col-sm-6">
-                        <div class="service-wrap">
-                            <div class="service-icon-3">
-                                <i class="fa-regular fa-clock"></i>
-                            </div>
-                            <div class="service-text">
-                                <h2>24/7 Support</h2>
-                                <p>Our dedicated team is available around the clock to assist you with any inquiries or emergencies during your journey.</p>
-                            </div>  
-                        </div>
-                    </div>
-                    <div class="col-md-4  col-sm-6">
-                        <div class="service-wrap">
-                            <div class="service-icon-4">
-                                <i class="fa-solid fa-gauge-simple"></i>
-                            </div>
-                            <div class="service-text">
-                               <h2>Flexible KM Package</h2>
-                                <p>Enjoy tailored kilometer packages designed to match the length and nature of your trip, offering greater flexibility.</p>
-                            </div>  
-                        </div>
-                    </div>
-                    <div class="col-md-4  col-sm-6">
-                        <div class="service-wrap">
-                            <div class="service-icon-5">
-                                <i class="fa-solid fa-hourglass-start"></i>
-                            </div>
-                            <div class="service-text">
-                                <h2>Hourly Package</h2>
-                                <p>Take advantage of our hourly rental options for short trips, ensuring you only pay for the time you need.</p>
-                            </div>  
-                        </div>
-                    </div>
-                    <div class="col-md-4  col-sm-6">
-                        <div class="service-wrap">
-                            <div class="service-icon-6">
-                                <i class="fi flaticon-electricity"></i>
-                            </div>
-                            <div class="service-text">
-                                <h2>Well Maintained with Regular service Vehicles</h2>
-                                <p> Our vehicles are regularly serviced and maintained to the highest standards for a safe and smooth ride.</p>
-                            </div>  
-                        </div>
-                    </div>
-                </div>
+      <!-- service area end -->
+      <!-- Why -->
+      <div class="service-style-3 section-padding">
+        <div class="container">
+          <div class="col-12">
+            <div class="section-title-s2 text-center">
+              <!-- <span>W</span> -->
+              <h2>Why Choose Us?</h2>
             </div>
-        </div>
-         <!-- Why area end -->
-          <!-- How To rent a Vehicle-->
-          <div class="service-style-3 section-padding section3">
-            <div class="container">
-                <div class="col-12">
-                    <div class="section-title-s2 text-center">
-                        <!-- <span>W</span> -->
-                        <h2>How To rent a Vehicle?</h2>
-                    </div>
-                </div>
-                
-                <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="service-wrap">
-                            <div class="service-icon">
-                                <i class="fa-solid fa-people-group"></i>
-                            </div>
-                            <div class="service-text">
-                                <h2>Enquire</h2>
-                                <p> Provide your requirement details by filling our form or by giving a call to the booking number.</p>
-                            </div>  
-                        </div>
-                    </div>
-                    <div class="col-md-4  col-sm-6">
-                        <div class="service-wrap">
-                            <div class="service-icon-2">
-                                <i class="fa-regular fa-newspaper"></i>
-                            </div>
-                            <div class="service-text">
-                                <h2>Get Quote</h2>
-                                <p>As per your requirement we will provide you the quote
-                                </p>
-                            </div>  
-                        </div>
-                    </div>
-                    <div class="col-md-4  col-sm-6">
-                        <div class="service-wrap">
-                            <div class="service-icon-3">
-                            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
 
-                            </div>
-                            <div class="service-text">
-                                <h2>Book</h2>
-                                <p>Like our quote? Just pay the booking amount, and we are good to go.</p>
-                            </div>  
-                        </div>
-                    </div>
+          <div class="row">
+            <div class="col-md-4 col-sm-6">
+              <div class="service-wrap">
+                <div class="service-icon">
+                  <i class="fa-solid fa-car"></i>
                 </div>
+                <div class="service-text">
+                  <h2>Wide Variety of vehicles</h2>
+                  <p>
+                    Choose from a range of well-maintained cars, from
+                    budget-friendly options to premium vehicles, to suit every
+                    traveler's needs.
+                  </p>
+                </div>
+              </div>
             </div>
-        </div>
-           <!--How To rent a Vehicle end-->
-          <!-- cab rental benifits-->
-          <div class="fun-fact-section-s2 ">
-            <div class="container">
-                <div class="col-12">
-                    <div class="section-title-s2 text-center">
-                        <h2>Cab Rental Benefits </h2>
-                    </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="service-wrap">
+                <div class="service-icon-2">
+                  <i class="fa-solid fa-hand-holding-dollar"></i>
                 </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="fun-fact-grids">
-                            <div class="grid">
-                                <div class="hx-counter-icon rental-icon1">
-                                    <i class="fa-solid fa-car font"></i>
-                                </div>
-                                <!-- <div>
+                <div class="service-text">
+                  <h2>Best Price Guarantee</h2>
+                  <p>
+                    We offer competitive pricing to ensure you get the best
+                    value for your trip, without compromising on quality.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="service-wrap">
+                <div class="service-icon-3">
+                  <i class="fa-regular fa-clock"></i>
+                </div>
+                <div class="service-text">
+                  <h2>24/7 Support</h2>
+                  <p>
+                    Our dedicated team is available around the clock to assist
+                    you with any inquiries or emergencies during your journey.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="service-wrap">
+                <div class="service-icon-4">
+                  <i class="fa-solid fa-gauge-simple"></i>
+                </div>
+                <div class="service-text">
+                  <h2>Flexible KM Package</h2>
+                  <p>
+                    Enjoy tailored kilometer packages designed to match the
+                    length and nature of your trip, offering greater
+                    flexibility.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="service-wrap">
+                <div class="service-icon-5">
+                  <i class="fa-solid fa-hourglass-start"></i>
+                </div>
+                <div class="service-text">
+                  <h2>Hourly Package</h2>
+                  <p>
+                    Take advantage of our hourly rental options for short trips,
+                    ensuring you only pay for the time you need.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="service-wrap">
+                <div class="service-icon-6">
+                  <i class="fi flaticon-electricity"></i>
+                </div>
+                <div class="service-text">
+                  <h2>Well Maintained with Regular service Vehicles</h2>
+                  <p>
+                    Our vehicles are regularly serviced and maintained to the
+                    highest standards for a safe and smooth ride.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Why area end -->
+      <!-- How To rent a Vehicle-->
+      <div class="service-style-3 section-padding section3">
+        <div class="container">
+          <div class="col-12">
+            <div class="section-title-s2 text-center">
+              <!-- <span>W</span> -->
+              <h2>How To rent a Vehicle?</h2>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-4 col-sm-6">
+              <div class="service-wrap">
+                <div class="service-icon">
+                  <i class="fa-solid fa-people-group"></i>
+                </div>
+                <div class="service-text">
+                  <h2>Enquire</h2>
+                  <p>
+                    Provide your requirement details by filling our form or by
+                    giving a call to the booking number.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="service-wrap">
+                <div class="service-icon-2">
+                  <i class="fa-regular fa-newspaper"></i>
+                </div>
+                <div class="service-text">
+                  <h2>Get Quote</h2>
+                  <p>As per your requirement we will provide you the quote</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+              <div class="service-wrap">
+                <div class="service-icon-3">
+                  <i class="fa-solid fa-mobile-screen-button"></i>
+                </div>
+                <div class="service-text">
+                  <h2>Book</h2>
+                  <p>
+                    Like our quote? Just pay the booking amount, and we are good
+                    to go.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--How To rent a Vehicle end-->
+      <!-- cab rental benifits-->
+      <div class="fun-fact-section-s2">
+        <div class="container">
+          <div class="col-12">
+            <div class="section-title-s2 text-center">
+              <h2>Cab Rental Benefits</h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="fun-fact-grids">
+                <div class="grid">
+                  <div class="hx-counter-icon rental-icon1">
+                    <i class="fa-solid fa-car font"></i>
+                  </div>
+                  <!-- <div>
                                     <h2><span class="odometer" data-count="4">00</span>+</h2>
                                 </div> -->
-                                <p>4+ Brands</p>
-                            </div>
-                            <div class="grid">
-                                <div class="hx-counter-icon rental-icon2">
-                                    <i class="fa-solid fa-hourglass-start font"></i>
-                                </div>
-                                <!-- <div>
+                  <p>4+ Brands</p>
+                </div>
+                <div class="grid">
+                  <div class="hx-counter-icon rental-icon2">
+                    <i class="fa-solid fa-hourglass-start font"></i>
+                  </div>
+                  <!-- <div>
                                     <h2><span class="odometer" data-count="300">00</span>+</h2>
                                 </div> -->
-                                <p>No Waiting Period</p>
-                            </div>
-                            <div class="grid">
-                                <div class="hx-counter-icon rental-icon3">
-                                    <i class="fa-solid fa-right-left font"></i>
-                                </div>
-                                <!-- <div >
+                  <p>No Waiting Period</p>
+                </div>
+                <div class="grid">
+                  <div class="hx-counter-icon rental-icon3">
+                    <i class="fa-solid fa-right-left font"></i>
+                  </div>
+                  <!-- <div >
                                     <h2><span class="odometer" data-count="1026">00</span></h2>
                                 </div> -->
-                                <p>Return Anytime</p>
-                            </div>
-                            <div class="grid">
-                                <div class="hx-counter-icon rental-icon4">
-                                    <i class="fa-solid fa-car-burst font"></i>
-                                </div>
-                                <!-- <div> -->
-                                    <!-- <h2><span class="odometer" data-count="25">00</span>+</h2> -->
-                                <!-- </div> -->
-                                <p>No Insurence & Maintence Cost  </p>
-                            </div>
-                           
-                        </div>
-                    </div>
+                  <p>Return Anytime</p>
                 </div>
+                <div class="grid">
+                  <div class="hx-counter-icon rental-icon4">
+                    <i class="fa-solid fa-car-burst font"></i>
+                  </div>
+                  <!-- <div> -->
+                  <!-- <h2><span class="odometer" data-count="25">00</span>+</h2> -->
+                  <!-- </div> -->
+                  <p>No Insurence & Maintence Cost</p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-        <!--cab rental benifits end-->
-        <!-- start fun-fact-section -->
-        <!-- <section class="fun-fact-section section-padding">
+      </div>
+      <!--cab rental benifits end-->
+      <!-- start fun-fact-section -->
+      <!-- <section class="fun-fact-section section-padding">
             <div class="container">
                 <div class="row">
                     <div class="col col-md-6 col-sm-12">
@@ -559,44 +664,66 @@
                 </div>
             </div> 
         </section> -->
-        <!-- end fun-fact-section -->
-        <!-- pricing-area -->
-         <div id="service">
-            <div class="col-12">
-                <div class="section-title-s2 text-center">
-                    <h2>Services </h2>
-                </div>
+      <!-- end fun-fact-section -->
+      <!-- pricing-area -->
+      <div id="service">
+        <div class="col-12">
+          <div class="section-title-s2 text-center">
+            <h2>Services</h2>
+          </div>
+        </div>
+        <div class="card-container">
+          <div class="card">
+            <img
+              src="assets/images/car-images/Tempo Traveller.jpeg"
+              alt="Card Image"
+            />
+            <h2 class="card-title">Tempo traveller</h2>
+            <div class="row">
+              <div class="col-sm-4 col-md-4" style="padding: 0px 0px 0px 11px">
+                <p style="font-size: 13px">Kilometer</p>
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  style="font-size: 10px; border-radius: 20px"
+                  >150 /Day</a
+                >
+              </div>
+              <div class="col-sm-4 col-md-4">
+                <p style="font-size: 13px">Per Km</p>
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  style="font-size: 10px; border-radius: 20px"
+                  >26rs/km</a
+                >
+              </div>
+              <div class="col-sm-4 col-md-4" style="padding: 0px 21px 0px 0px">
+                <p style="font-size: 13px">Day Rent</p>
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  style="font-size: 10px; border-radius: 20px"
+                  >4000Rs</a
+                >
+              </div>
             </div>
-            <div class="card-container">
-                <div class="card">
-                    <img src="assets/images/car-images/Tempo Traveller.jpeg" alt="Card Image">
-                    <h2 class="card-title">Tempo traveller</h2>
-                    <div class="row">
-                      <div class="col-sm-4 col-md-4" style="padding: 0px 0px 0px 11px;">
-                      <p style="font-size: 13px;">Kilometer </p><a href="#" class="btn btn-primary" style="font-size: 10px;border-radius: 20px;">150 /Day</a>
-                  </div>
-                      <div class="col-sm-4 col-md-4">
-                     <p style="font-size: 13px;">Per Km</p> <a href="#" class="btn btn-primary" style="font-size: 10px;border-radius: 20px;">26rs/km</a>
-                  </div>
-                      <div class="col-sm-4 col-md-4" style="padding: 0px 21px 0px 0px;">
-                      <p  style="font-size: 13px;">Day Rent </p><a href="#" class="btn btn-primary" style="font-size: 10px;border-radius: 20px;">4000Rs</a>
-                  </div>
+            <div class="row" style="padding: 0px 5px; margin-top: 20px">
+              <div class="col-sm-4 col-md-4" style="text-transform: uppercase">
+                <p style="font-size: 11px">Mileage</p>
+                <div class="service_icon">
+                  <i class="fa-solid fa-gauge"></i>
                 </div>
-                <div class="row" style="padding: 0px 5px;margin-top: 20px;">
-                  <div class="col-sm-4 col-md-4" style="text-transform: uppercase;">
-                     
-                      <p style="font-size: 11px;">Mileage</p> 
-                      <div class="service_icon">
-                        <i class="fa-solid fa-gauge"></i></div>
-                      <p style="font-size: 11px;"> 7km /1ltr</p>
+                <p style="font-size: 11px">7km /1ltr</p>
+              </div>
+              <div class="col-sm-4 col-md-4" style="text-transform: uppercase">
+                <p style="font-size: 11px">Seats</p>
+                <div class="service_icon">
+                  <i class="fa-solid fa-chair"></i>
                 </div>
-                  <div class="col-sm-4 col-md-4" style="text-transform: uppercase;" >
-                      <p style="font-size: 11px;">Seats</p> 
-                      <div class="service_icon">
-                      <i class="fa-solid fa-chair"></i></div>
-                      <p style="font-size: 11px;">12</p>
-                </div>
-                <!-- <div class="col-sm-4 col-md-3" style="text-transform: uppercase;">
+                <p style="font-size: 11px">12</p>
+              </div>
+              <!-- <div class="col-sm-4 col-md-3" style="text-transform: uppercase;">
                   <p style="font-size: 11px;">bootspace</p> 
                   <div style="border: 1px solid #ed3833;
                   color: #ed3833;
@@ -605,216 +732,339 @@
                   <i class="fa-solid fa-suitcase"></i></div>
                  <p style="font-size: 11px;">3</p>
                 </div> -->
-                  <div class="col-sm-4 col-md-4" style="text-transform: uppercase;">
-                      <p style="font-size: 11px;">petrol </p> 
-                      <div class="service_icon">
-                      <i class="fa-solid fa-gas-pump"></i>
-                      <p style="font-size: 11px;">35L</p></div>
+              <div class="col-sm-4 col-md-4" style="text-transform: uppercase">
+                <p style="font-size: 11px">petrol</p>
+                <div class="service_icon">
+                  <i class="fa-solid fa-gas-pump"></i>
+                  <p style="font-size: 11px">35L</p>
                 </div>
-                </div>
-                    <div class="card-body">
-                      <div class="col-sm-6 col-md-6 phone">
-                      <a href="tel:7386733999" class="card-link"><i class="fi flaticon-call acolor"></i></a></div>
-                      <div class="col-sm-6 col-md-6 mail">
-                      <a href="https://wa.me/7386733999" class="card-link"> <i class="fa-brands fa-whatsapp mcolor"></i></a></div>
-                    </div>
-                </div>
-            <div class="card">
-    
-                <img src="assets/images/car-images/Tempo-Traveller-min.png" alt="Card Image">
-                <h2 class="card-title"> Tempo traveller</h2>
-                <div class="row">
-                  <div class="col-sm-4 col-md-4" style="padding: 0px 0px 0px 11px;">
-                  <p style="font-size: 13px;">Kilometer </p><a href="#" class="btn btn-primary" style="font-size: 10px;border-radius: 20px;">300/Day</a>
-              </div>
-                  <div class="col-sm-4 col-md-4">
-                 <p style="font-size: 13px;">Per Km</p> <a href="#" class="btn btn-primary" style="font-size: 10px;border-radius: 20px;">35rs/km</a>
-              </div>
-                  <div class="col-sm-4 col-md-4" style="padding: 0px 21px 0px 0px;">
-                  <p  style="font-size: 13px;">Day Rent </p><a href="#" class="btn btn-primary" style="font-size: 10px;border-radius: 20px;">10km/1Ltr</a>
               </div>
             </div>
-            <div class="row" style="padding: 0px 5px;margin-top: 20px;">
-              <div class="col-sm-4 col-md-4" style="text-transform: uppercase;">
-                 
-                  <p style="font-size: 11px;">Mileage</p> 
-                  <div class="service_icon">
-                    <i class="fa-solid fa-gauge"></i></div>
-                  <p style="font-size: 11px;">7km /1ltr</p>
-            </div>
-              <div class="col-sm-4 col-md-4" style="text-transform: uppercase;" >
-                  <p style="font-size: 11px;">Seats</p> 
-                  <div class="service_icon">
-                  <i class="fa-solid fa-chair"></i></div>
-                  <p style="font-size: 11px;">17</p>
-            </div>
-           
-              <div class="col-sm-4 col-md-4" style="text-transform: uppercase;">
-                  <p style="font-size: 11px;">petrol </p> 
-                  <div class="service_icon">
-                  <i class="fa-solid fa-gas-pump"></i></div>
-                  <p style="font-size: 11px;">35L</p>
-            </div>
-            </div>
-                <div class="card-body">
-                  <div class="col-sm-6 col-md-6 phone">
-                  <a href="tel:7386733999" class="card-link"><i class="fi flaticon-call acolor"></i></a></div>
-                  <div class="col-sm-6 col-md-6 mail">
-                  <a href="https://wa.me/7386733999" class="card-link"><i class="fa-brands fa-whatsapp mcolor"></i></a></div>
-                </div>
-            </div>
-            
-          <div class="card">
-    
-            <img src="assets/images/car-images/innova-crysta.png" alt="Card Image">
-            <h2 class="card-title">Innova Crysta </h2>
-            <div class="row">
-              <div class="col-sm-4 col-md-4" style="padding: 0px 0px 0px 11px;">
-              <p style="font-size: 13px;">Kilometer </p><a href="#" class="btn btn-primary" style="font-size: 10px;border-radius: 20px;">300/Day</a>
-          </div>
-              <div class="col-sm-4 col-md-4">
-             <p style="font-size: 13px;">Per Km</p> <a href="#" class="btn btn-primary" style="font-size: 10px;border-radius: 20px;">23rs/km</a>
-          </div>
-              <div class="col-sm-4 col-md-4" style="padding: 0px 21px 0px 0px;">
-              <p  style="font-size: 13px;">Day Rent </p><a href="#" class="btn btn-primary" style="font-size: 10px;border-radius: 20px;">3000 Rs</a>
-          </div>
-        </div>
-        <div class="row" style="padding: 0px 5px;margin-top: 20px;">
-          <div class="col-sm-4 col-md-4" style="text-transform: uppercase;">
-             
-              <p style="font-size: 11px;">Milegae</p> 
-              <div class="service_icon">
-                <i class="fa-solid fa-gauge"></i></div>
-              <p style="font-size: 11px;">10km/ 1ltr</p>
-        </div>
-          <div class="col-sm-4 col-md-4" style="text-transform: uppercase;" >
-              <p style="font-size: 11px;">Seats</p> 
-              <div class="service_icon">
-              <i class="fa-solid fa-chair"></i></div>
-              <p style="font-size: 11px;">7+1</p>
-        </div>
-        
-          <div class="col-sm-4 col-md-4" style="text-transform: uppercase;">
-              <p style="font-size: 11px;">petrol </p> 
-              <div class="service_icon">
-              <i class="fa-solid fa-gas-pump"></i></div>
-              <p style="font-size: 11px;">35L</p>
-        </div>
-        </div>
             <div class="card-body">
               <div class="col-sm-6 col-md-6 phone">
-              <a href="tel:7386733999" class="card-link"><i class="fi flaticon-call acolor"></i></a></div>
+                <a href="tel:7386733999" class="card-link"
+                  ><i class="fi flaticon-call acolor"></i
+                ></a>
+              </div>
               <div class="col-sm-6 col-md-6 mail">
-              <a href="https://wa.me/7386733999" class="card-link"><i class="fa-brands fa-whatsapp mcolor"></i></a></div>
+                <a href="https://wa.me/7386733999" class="card-link">
+                  <i class="fa-brands fa-whatsapp mcolor"></i
+                ></a>
+              </div>
             </div>
+          </div>
+          <div class="card">
+            <img
+              src="assets/images/car-images/Tempo-Traveller-min.png"
+              alt="Card Image"
+            />
+            <h2 class="card-title">Tempo traveller</h2>
+            <div class="row">
+              <div class="col-sm-4 col-md-4" style="padding: 0px 0px 0px 11px">
+                <p style="font-size: 13px">Kilometer</p>
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  style="font-size: 10px; border-radius: 20px"
+                  >300/Day</a
+                >
+              </div>
+              <div class="col-sm-4 col-md-4">
+                <p style="font-size: 13px">Per Km</p>
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  style="font-size: 10px; border-radius: 20px"
+                  >35rs/km</a
+                >
+              </div>
+              <div class="col-sm-4 col-md-4" style="padding: 0px 21px 0px 0px">
+                <p style="font-size: 13px">Day Rent</p>
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  style="font-size: 10px; border-radius: 20px"
+                  >10km/1Ltr</a
+                >
+              </div>
+            </div>
+            <div class="row" style="padding: 0px 5px; margin-top: 20px">
+              <div class="col-sm-4 col-md-4" style="text-transform: uppercase">
+                <p style="font-size: 11px">Mileage</p>
+                <div class="service_icon">
+                  <i class="fa-solid fa-gauge"></i>
+                </div>
+                <p style="font-size: 11px">7km /1ltr</p>
+              </div>
+              <div class="col-sm-4 col-md-4" style="text-transform: uppercase">
+                <p style="font-size: 11px">Seats</p>
+                <div class="service_icon">
+                  <i class="fa-solid fa-chair"></i>
+                </div>
+                <p style="font-size: 11px">17</p>
+              </div>
+
+              <div class="col-sm-4 col-md-4" style="text-transform: uppercase">
+                <p style="font-size: 11px">petrol</p>
+                <div class="service_icon">
+                  <i class="fa-solid fa-gas-pump"></i>
+                </div>
+                <p style="font-size: 11px">35L</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="col-sm-6 col-md-6 phone">
+                <a href="tel:7386733999" class="card-link"
+                  ><i class="fi flaticon-call acolor"></i
+                ></a>
+              </div>
+              <div class="col-sm-6 col-md-6 mail">
+                <a href="https://wa.me/7386733999" class="card-link"
+                  ><i class="fa-brands fa-whatsapp mcolor"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              src="assets/images/car-images/innova-crysta.png"
+              alt="Card Image"
+            />
+            <h2 class="card-title">Innova Crysta</h2>
+            <div class="row">
+              <div class="col-sm-4 col-md-4" style="padding: 0px 0px 0px 11px">
+                <p style="font-size: 13px">Kilometer</p>
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  style="font-size: 10px; border-radius: 20px"
+                  >300/Day</a
+                >
+              </div>
+              <div class="col-sm-4 col-md-4">
+                <p style="font-size: 13px">Per Km</p>
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  style="font-size: 10px; border-radius: 20px"
+                  >23rs/km</a
+                >
+              </div>
+              <div class="col-sm-4 col-md-4" style="padding: 0px 21px 0px 0px">
+                <p style="font-size: 13px">Day Rent</p>
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  style="font-size: 10px; border-radius: 20px"
+                  >3000 Rs</a
+                >
+              </div>
+            </div>
+            <div class="row" style="padding: 0px 5px; margin-top: 20px">
+              <div class="col-sm-4 col-md-4" style="text-transform: uppercase">
+                <p style="font-size: 11px">Milegae</p>
+                <div class="service_icon">
+                  <i class="fa-solid fa-gauge"></i>
+                </div>
+                <p style="font-size: 11px">10km/ 1ltr</p>
+              </div>
+              <div class="col-sm-4 col-md-4" style="text-transform: uppercase">
+                <p style="font-size: 11px">Seats</p>
+                <div class="service_icon">
+                  <i class="fa-solid fa-chair"></i>
+                </div>
+                <p style="font-size: 11px">7+1</p>
+              </div>
+
+              <div class="col-sm-4 col-md-4" style="text-transform: uppercase">
+                <p style="font-size: 11px">petrol</p>
+                <div class="service_icon">
+                  <i class="fa-solid fa-gas-pump"></i>
+                </div>
+                <p style="font-size: 11px">35L</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="col-sm-6 col-md-6 phone">
+                <a href="tel:7386733999" class="card-link"
+                  ><i class="fi flaticon-call acolor"></i
+                ></a>
+              </div>
+              <div class="col-sm-6 col-md-6 mail">
+                <a href="https://wa.me/7386733999" class="card-link"
+                  ><i class="fa-brands fa-whatsapp mcolor"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <img
+              src="assets/images/car-images/innova-sedan.jpeg"
+              alt="Card Image"
+            />
+            <h2 class="card-title">Inova Crysta Sedan</h2>
+            <div class="row">
+              <div class="col-sm-4 col-md-4" style="padding: 0px 0px 0px 11px">
+                <p style="font-size: 13px">Kilometer</p>
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  style="font-size: 10px; border-radius: 20px"
+                  >300/Day</a
+                >
+              </div>
+              <div class="col-sm-4 col-md-4">
+                <p style="font-size: 13px">Per Km</p>
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  style="font-size: 10px; border-radius: 20px"
+                  >16rs/km</a
+                >
+              </div>
+              <div class="col-sm-4 col-md-4" style="padding: 0px 21px 0px 0px">
+                <p style="font-size: 13px">Day Rent</p>
+                <a
+                  href="#"
+                  class="btn btn-primary"
+                  style="font-size: 10px; border-radius: 20px"
+                  >2200rs</a
+                >
+              </div>
+            </div>
+            <div class="row" style="padding: 0px 5px; margin-top: 20px">
+              <div class="col-sm-4 col-md-4" style="text-transform: uppercase">
+                <p style="font-size: 11px">Mileage</p>
+                <div class="service_icon">
+                  <i class="fa-solid fa-gauge"></i>
+                </div>
+                <p style="font-size: 11px">10km /1ltr</p>
+              </div>
+              <div class="col-sm-4 col-md-4" style="text-transform: uppercase">
+                <p style="font-size: 11px">Seats</p>
+                <div class="service_icon">
+                  <i class="fa-solid fa-chair"></i>
+                </div>
+                <p style="font-size: 11px">4+1</p>
+              </div>
+              <div class="col-sm-4 col-md-4" style="text-transform: uppercase">
+                <p style="font-size: 11px">petrol</p>
+                <div class="service_icon">
+                  <i class="fa-solid fa-gas-pump"></i>
+                </div>
+                <p style="font-size: 11px">35L</p>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="col-sm-6 col-md-6 phone">
+                <a href="tel:7386733999" class="card-link"
+                  ><i class="fi flaticon-call acolor"></i
+                ></a>
+              </div>
+              <div class="col-sm-6 col-md-6 mail">
+                <a href="https://wa.me/7386733999" class="card-link"
+                  ><i class="fa-brands fa-whatsapp mcolor"></i
+                ></a>
+              </div>
+            </div>
+          </div>
         </div>
-            
-      <div class="card">
-    
-        <img src="assets/images/car-images/innova-sedan.jpeg" alt="Card Image">
-        <h2 class="card-title">Inova Crysta Sedan </h2>
-        <div class="row">
-          <div class="col-sm-4 col-md-4" style="padding: 0px 0px 0px 11px;">
-          <p style="font-size: 13px;">Kilometer </p><a href="#" class="btn btn-primary" style="font-size: 10px;border-radius: 20px;">300/Day</a>
       </div>
-          <div class="col-sm-4 col-md-4">
-         <p style="font-size: 13px;">Per Km</p> <a href="#" class="btn btn-primary" style="font-size: 10px;border-radius: 20px;">16rs/km</a>
-      </div>
-          <div class="col-sm-4 col-md-4" style="padding: 0px 21px 0px 0px;">
-          <p  style="font-size: 13px;">Day Rent </p><a href="#" class="btn btn-primary" style="font-size: 10px;border-radius: 20px;">2200rs</a>
-      </div>
-    </div>
-    <div class="row" style="padding: 0px 5px;margin-top: 20px;">
-      <div class="col-sm-4 col-md-4" style="text-transform: uppercase;">
-         
-          <p style="font-size: 11px;">Mileage</p> 
-          <div class="service_icon">
-            <i class="fa-solid fa-gauge"></i></div>
-          <p style="font-size: 11px;">10km /1ltr</p>
-    </div>
-      <div class="col-sm-4 col-md-4" style="text-transform: uppercase;" >
-          <p style="font-size: 11px;">Seats</p> 
-          <div class="service_icon">
-          <i class="fa-solid fa-chair"></i></div>
-          <p style="font-size: 11px;">4+1</p>
-    </div>
-      <div class="col-sm-4 col-md-4" style="text-transform: uppercase;">
-          <p style="font-size: 11px;">petrol </p> 
-          <div class="service_icon">
-          <i class="fa-solid fa-gas-pump"></i></div>
-          <p style="font-size: 11px;">35L</p>
-    </div>
-    </div>
-        <div class="card-body">
-          <div class="col-sm-6 col-md-6 phone">
-          <a href="tel:7386733999" class="card-link"><i class="fi flaticon-call acolor"></i></a></div>
-          <div class="col-sm-6 col-md-6 mail">
-          <a href="https://wa.me/7386733999" class="card-link"><i class="fa-brands fa-whatsapp mcolor"></i></a></div>
+      <div class="container-fluid" style="margin-top: 53px">
+        <div class="col-12">
+          <div class="section-title-s2 text-center">
+            <h2>Divine Destinations Around Tirupati</h2>
+          </div>
         </div>
-    </div>
+        <div class="card-container">
+          <div class="card" style="width: 20rem">
+            <img
+              src="assets/images/Divine/tirupati.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Tirupath- Tirumal</h5>
             </div>
-         </div>
-         <div class="container-fluid" style="margin-top: 53px;">
-            <div class="col-12">
-                <div class="section-title-s2 text-center">
-                    <h2>Divine Destinations Around Tirupati </h2>
-                </div>
+          </div>
+          <div class="card" style="width: 20rem">
+            <img
+              src="assets/images/Divine/Govindha swamivari temple.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Govindha swamivari temple</h5>
             </div>
-            <div class="card-container">
-            <div class="card" style="width: 20rem;">
-                <img src="assets/images/Divine/tirupati.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Tirupath- Tirumal </h5>
-                </div>
-              </div>
-              <div class="card" style="width: 20rem;">
-                <img src="assets/images/Divine/Govindha swamivari temple.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Govindha swamivari temple  </h5>
-                </div>
-              </div>
-              <div class="card" style="width: 20rem;">
-                <img src="assets/images/Divine/alipiri1.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Alipiri temple  </h5>
-                </div>
-              </div>
-              <div class="card" style="width: 20rem;">
-                <img src="assets/images/Divine/Sree vari metu.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Sree vari metu </h5>
-                </div>
-              </div>
-              <div class="card" style="width: 20rem;">
-                <img src="assets/images/Divine/Magapuram amma vari temple.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Magapuram amma vari temple </h5>
-                </div>
-              </div>
-              <div class="card" style="width: 20rem;">
-                <img src="assets/images/Divine/Kanipakamu.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Kanipakamu( Ganesh temple ) </h5>
-                </div>
-              </div>
-              <div class="card" style="width: 20rem;">
-                <img src="assets/images/Divine/Talakona.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Talakona ( shiva temple ) </h5>
-                </div>
-              </div>
-              <div class="card" style="width: 20rem;">
-                <img src="assets/images/Divine/Srikalahasti-Temple.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Srikalasthri temple </h5>
-                </div>
-              </div>
+          </div>
+          <div class="card" style="width: 20rem">
+            <img
+              src="assets/images/Divine/alipiri1.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Alipiri temple</h5>
             </div>
-         </div>
-       
-        <!-- pricing-area end -->
-        <!-- .hx-team-area start -->
-        <!-- <div class="hx-team-area section-padding">
+          </div>
+          <div class="card" style="width: 20rem">
+            <img
+              src="assets/images/Divine/Sree vari metu.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Sree vari metu</h5>
+            </div>
+          </div>
+          <div class="card" style="width: 20rem">
+            <img
+              src="assets/images/Divine/Magapuram amma vari temple.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Magapuram amma vari temple</h5>
+            </div>
+          </div>
+          <div class="card" style="width: 20rem">
+            <img
+              src="assets/images/Divine/Kanipakamu.png"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Kanipakamu( Ganesh temple )</h5>
+            </div>
+          </div>
+          <div class="card" style="width: 20rem">
+            <img
+              src="assets/images/Divine/Talakona.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Talakona ( shiva temple )</h5>
+            </div>
+          </div>
+          <div class="card" style="width: 20rem">
+            <img
+              src="assets/images/Divine/Srikalahasti-Temple.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Srikalasthri temple</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- pricing-area end -->
+      <!-- .hx-team-area start -->
+      <!-- <div class="hx-team-area section-padding">
             <div class="container">
                 <div class="col-12">
                     <div class="section-title-s2 text-center">
@@ -886,12 +1136,10 @@
                 </div>
             </div>
         </div> -->
-        <!-- .hx-team-area end -->
-        
+      <!-- .hx-team-area end -->
 
-
-        <!-- start blog-section -->
-        <!-- <section class="blog-section section-padding">
+      <!-- start blog-section -->
+      <!-- <section class="blog-section section-padding">
             <div class="container">
                 <div class="row">
                     <div class="col col-xs-12">
@@ -954,82 +1202,124 @@
                 </div>
             </div> 
         </section> -->
-        <!-- end blog-section -->
-        <!-- .contact area start -->
-        <div class="hx-contact-area section-padding" id="contact">
-            <div class="container-fluid">
-                <div class="row" style="display: flex;">
-                    <div class="col col-md-7 col-sm-12 col-12">
-                        <div class="hx-contact-content">
-                            <h2>Book An Appointment</h2>
-                            <div class="hx-contact-form">
-                                <form method="post" class="contact-validation-active" id="hx-contact-form">
-                                    <div class="half-col">
-                                        <input type="text" name="name" id="name" class="form-control" placeholder="Your Name">
-                                    </div>
-                                    <div class="half-col">
-                                        <input type="text" name="phone" id="phone" class="form-control" placeholder="Phone">
-                                    </div>
-                                    <div class="half-col">
-                                        <input type="email" name="email" id="email" class="form-control" placeholder="Email">
-                                    </div>
-                                    <div class="half-col">
-                                    <select name="address" id="address" class="form-control">
-                                        <option disabled selected>Tempo traveller</option>
-                                        <option>Tempo traveller</option>
-                                        <option>INNOVA CRYSTA</option>
-                                        <option>Innova crysta SEDAN </option>
-                                        <!-- <option>Breaks</option> -->
-                                    </select>
-                                    </div>
-                                    <div>
-                                        <textarea class="form-control" name="note"  id="note" placeholder="Description..."></textarea>
-                                    </div>
-                                    <div class="submit-btn-wrapper">
-                                        <button type="submit" class="theme-btn-s4">Send Message</button>
-                                        <div id="loader">
-                                            <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
-                                        </div>
-                                    </div>
-                                    <div class="clearfix error-handling-messages">
-                                        <div id="success">Thank you</div>
-                                        <div id="error"> Error occurred while sending email. Please try again later. </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
+      <!-- end blog-section -->
+      <!-- .contact area start -->
+      <div class="hx-contact-area section-padding" id="contact">
+        <div class="container-fluid">
+          <div class="row" style="display: flex">
+            <div class="col col-md-7 col-sm-12 col-12">
+              <div class="hx-contact-content">
+                <h2>Book An Appointment</h2>
+                <div class="hx-contact-form">
+                  <form
+                    method="post"
+                    class="contact-validation-active"
+                    id="hx-contact-form"
+                  >
+                    <div class="half-col">
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        class="form-control"
+                        placeholder="Your Name"
+                      />
                     </div>
-                    <div class="col-md-5" style="flex-grow: 1;">
-                        <!-- <div class="hx-contact-img"> -->
-                            <img src="assets/images/contact/JHB.png" alt="" style="height: 100%;">
-                        <!-- </div> -->
+                    <div class="half-col">
+                      <input
+                        type="text"
+                        name="phone"
+                        id="phone"
+                        class="form-control"
+                        placeholder="Phone"
+                      />
                     </div>
+                    <div class="half-col">
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        class="form-control"
+                        placeholder="Email"
+                      />
+                    </div>
+                    <div class="half-col">
+                      <select name="address" id="address" class="form-control">
+                        <option disabled selected>Tempo traveller</option>
+                        <option>Tempo traveller</option>
+                        <option>INNOVA CRYSTA</option>
+                        <option>Innova crysta SEDAN</option>
+                        <!-- <option>Breaks</option> -->
+                      </select>
+                    </div>
+                    <div>
+                      <textarea
+                        class="form-control"
+                        name="note"
+                        id="note"
+                        placeholder="Description..."
+                      ></textarea>
+                    </div>
+                    <div class="submit-btn-wrapper">
+                      <button type="submit" class="theme-btn-s4">
+                        Send Message
+                      </button>
+                      <div id="loader">
+                        <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+                      </div>
+                    </div>
+                    <div class="clearfix error-handling-messages">
+                      <div id="success">Thank you</div>
+                      <div id="error">
+                        Error occurred while sending email. Please try again
+                        later.
+                      </div>
+                    </div>
+                  </form>
                 </div>
+              </div>
             </div>
+            <div class="col-md-5" style="flex-grow: 1">
+              <!-- <div class="hx-contact-img"> -->
+              <img
+                src="assets/images/contact/JHB.png"
+                alt=""
+                style="height: 100%"
+              />
+              <!-- </div> -->
+            </div>
+          </div>
         </div>
-        <!-- .contact area start -->
-       
+      </div>
+      <!-- .contact area start -->
 
+      <!--tours and travels-->
 
-        <!--tours and travels-->
-        
-        <!--tours and travels end-->
+      <!--tours and travels end-->
 
-       <!-- hx-client-area start -->
-        
-       <!-- hx-client-area end -->
-        <!-- .hx-site-footer-area start -->
-        <div class="hx-site-footer-area">
-            <div class="hx-site-footer-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 col-sm-6 footer-t">
-                            <div class="hx-site-footer-text">
-                                <div class="hx-site-logo">
-                                    <img src="assets/images/JH LOGO.png" alt="" height="100px">
-                                </div>
-                                <p>Jai Hanuman Tours & Travels is a trusted car rental service specializing in comfortable and reliable transportation from Bangalore to Tirupati and the surrounding areas.</p>
-                                <!-- <div class="social">
+      <!-- hx-client-area start -->
+
+      <!-- hx-client-area end -->
+      <!-- .hx-site-footer-area start -->
+      <div class="hx-site-footer-area">
+        <div class="hx-site-footer-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 col-sm-6 footer-t">
+                <div class="hx-site-footer-text">
+                  <div class="hx-site-logo">
+                    <img
+                      src="assets/images/JH LOGO.png"
+                      alt=""
+                      height="100px"
+                    />
+                  </div>
+                  <p>
+                    Jai Hanuman Tours & Travels is a trusted car rental service
+                    specializing in comfortable and reliable transportation from
+                    Bangalore to Tirupati and the surrounding areas.
+                  </p>
+                  <!-- <div class="social">
                                     <ul class="d-flex">
                                         <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                         <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -1037,9 +1327,9 @@
                                         <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
                                     </ul>
                                 </div> -->
-                            </div>
-                        </div>
-                        <!-- <div class="col-md-3 col-sm-6 footer-t">
+                </div>
+              </div>
+              <!-- <div class="col-md-3 col-sm-6 footer-t">
                             <div class="hx-site-footer-link">
                                 <h3>Recent post</h3>
                                 <div class="hx-latest-section">
@@ -1066,55 +1356,56 @@
                                 </div>
                             </div>
                         </div> -->
-                        <div class="col-md-4 col-sm-6 footer-t">
-                            <div class="hx-site-footer-adress">
-                                <h3>Address</h3>
-                                <div class="adress-section">
-                                    <ul>
-                                        <li>7/11/1, Srinivas puram </li>
-                                        <li>TIRUPATI</li>
-                                    </ul>
-                                    <ul class="ad">
-                                        <li><span>Phone:</span> 7386733999 /9177775289 </li>
-                                        <li><span>Email:</span>  Reddappa@492@gmail.com</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6 footer-t">
-                            <div class="hx-site-footer-service">
-                                <h3>Services</h3>
-                                <div class="service-section">
-                                    <ul>
-                                       <li>Tempo traveller</li>
-                                       <li>INNOVA CRYSTA</li>
-                                       <li> Innova crysta SEDAN </li>
-                                       
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+              <div class="col-md-4 col-sm-6 footer-t">
+                <div class="hx-site-footer-adress">
+                  <h3>Address</h3>
+                  <div class="adress-section">
+                    <ul>
+                      <li>7/11/1, Srinivas puram</li>
+                      <li>TIRUPATI</li>
+                    </ul>
+                    <ul class="ad">
+                      <li><span>Phone:</span> 7386733999 /9177775289</li>
+                      <li><span>Email:</span> Reddappa@492@gmail.com</li>
+                    </ul>
+                  </div>
                 </div>
-            </div>
-            <div class="hx-site-footer-bottom">
-                <div class="container">
-                    <div class="hx-site-footer-bottom-content">
-                        <div class="row">
-                            <div class="col-12">
-                                <span class="pull-left">© 2023 Webxinfinity IT Solutions | Creative Website Development | Digital Marketing Services | Growth Hacking Services. All Rights Reserved By <b>BLOWPIX SOLUTIONS PRIVATE LIMITED</b></span>
-                            </div>
-                        </div>
-                    </div>
+              </div>
+              <div class="col-md-4 col-sm-6 footer-t">
+                <div class="hx-site-footer-service">
+                  <h3>Services</h3>
+                  <div class="service-section">
+                    <ul>
+                      <li>Tempo traveller</li>
+                      <li>INNOVA CRYSTA</li>
+                      <li>Innova crysta SEDAN</li>
+                    </ul>
+                  </div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-        <!-- .hx-site-footer-area end -->
-
+        <div class="hx-site-footer-bottom">
+          <div class="container">
+            <div class="hx-site-footer-bottom-content">
+              <div class="row">
+                <div class="col-12">
+                  <span class="pull-left"
+                    >© 2023 Webxinfinity IT Solutions | Creative Website
+                    Development | Digital Marketing Services | Growth Hacking
+                    Services. All Rights Reserved By
+                    <b>BLOWPIX SOLUTIONS PRIVATE LIMITED</b></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- .hx-site-footer-area end -->
     </div>
     <!-- end of page-wrapper -->
-
-
 
     <!-- All JavaScript files
     ================================================== -->
@@ -1126,5 +1417,32 @@
 
     <!-- Custom script for this template -->
     <script src="assets/js/script.js"></script>
-</body>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let currentSlide = 0;
+        const slides = document.querySelector(".slides");
+        const slideCount = document.querySelectorAll(".slide").length;
+
+        function showSlide(index) {
+          currentSlide = (index + slideCount) % slideCount;
+          const offset = -currentSlide * 100;
+          slides.style.transform = `translateX(${offset}%)`;
+        }
+
+        document.querySelector(".prev").addEventListener("click", () => {
+          showSlide(currentSlide - 1);
+        });
+
+        document.querySelector(".next").addEventListener("click", () => {
+          showSlide(currentSlide + 1);
+        });
+
+        // Auto-slide every 3 seconds
+        setInterval(() => {
+          showSlide(currentSlide + 1);
+        }, 5000);
+      });
+    </script>
+  </body>
 </html>
