@@ -1647,7 +1647,7 @@ img {
     .header-style-2 {
         width: 100%;
         padding-top: 10 px;
-        position: fixed;
+        /* position: fixed; */
         left: 0;
         top: 0;
         z-index: 100;
@@ -2166,7 +2166,7 @@ hero-style-2
 =======================================*/
 
 .hero-static-image-2 .hero-image-2 {
-    background: url(../images/slider/JH Homepage.png) center center/100% no-repeat local;
+    /* background: url(../images/slider/JHHomepage.png) center center/100% no-repeat local; */
     /* right: -135px; */
     /* top: 50%; */
     /* width: 600px; */
@@ -3900,7 +3900,7 @@ hero-style-2
 
 .adress-section .ad span {
     color: #000;
-    f
+    
 }
 
 .service-section ul li {
@@ -5741,5 +5741,25 @@ color:#3d9857
     .contact-content{
         padding-right: 0px !important;
 
+    }
+} 
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+    display: block;
+}
+.carousel-indicators .active {
+    width: 30px;
+    height: 3px;
+    margin: 0;
+    background-color: #fff;
+}
+.w-100 {
+    width: 100% !important;
+    height: 600px !important;
+}
+@media only screen 
+  and (max-width: 480px) { 
+    .w-100 {
+        /* width: 100% !important; */
+        height: 300px !important;
     }
 } 
